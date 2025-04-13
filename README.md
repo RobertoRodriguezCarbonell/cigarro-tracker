@@ -1,13 +1,13 @@
 # Cigarro Tracker
 
-**Cigarro Tracker** es una aplicación web diseñada para ayudar a los usuarios a tomar el control de sus hábitos de consumo de tabaco. La aplicación permite registrar el número de cigarros y porros que se consumen, visualizar estadísticas detalladas y calcular el impacto económico de ese consumo. Además, la aplicación facilita el seguimiento del progreso mediante gráficos interactivos y métricas avanzadas, con el objetivo de motivar y apoyar el proceso de dejar de fumar.
+**Cigarro Tracker** es una aplicación web diseñada para ayudar a los usuarios a tomar el control de sus hábitos de consumo de tabaco. La aplicación permite registrar el número de cigarros que se consumen, visualizar estadísticas detalladas y calcular el impacto económico de ese consumo. Además, la aplicación facilita el seguimiento del progreso mediante gráficos interactivos y métricas avanzadas, con el objetivo de motivar y apoyar el proceso de dejar de fumar.
 
 ---
 
 ## Características
 
 - **Registro Diario de Consumo:**  
-  Permite a los usuarios anotar individualmente cada cigarro o porro consumido, indicando el motivo (por ejemplo, estrés, nerviosismo, costumbre, social, otro) y la fecha y hora exactas.
+  Permite a los usuarios anotar individualmente cada cigarro consumido, indicando el motivo (por ejemplo, estrés, nerviosismo, costumbre, social, otro) y la fecha y hora exactas.
 
 - **Control Económico:**  
   Los usuarios pueden registrar el total gastado en cada compra en el estanco (incluyendo tabaco, mechero, filtros, etc.) y visualizar el impacto económico de su consumo.

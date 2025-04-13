@@ -7,6 +7,8 @@ export const resources = [
     image:
       "https://media.istockphoto.com/id/1133345196/es/foto/vista-de-los-cigarrillos-y-la-pila-de-tabaco-la-planta-de-tabaco-es-parte-del-g%C3%A9nero-nicotiana.jpg?s=612x612&w=0&k=20&c=WHDgxm2Omwd4RjCqJ-lnWeAmfsfa6nuenQzySG2Hkxs=", // URL de la imagen
     url: "https://www.who.int/es/news-room/fact-sheets/detail/tobacco",
+    readTime: 25,
+    read: false,
   },
   {
     id: 2,
@@ -14,8 +16,10 @@ export const resources = [
     description:
       "Artículos y consejos prácticos para romper con el hábito del tabaco y mejorar tu salud.",
     image:
-      "https://images.theconversation.com/files/444572/original/file-20220204-17-bu035r.jpg?ixlib=rb-4.1.0&rect=0%2C628%2C5184%2C2592&q=45&auto=format&w=1356&h=668&fit=crop",
+      "https://images.theconversation.com/files/444572/original/file-20220204-17-bu035r.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=1356&h=668&fit=crop",
     url: "https://smokefree.gov/",
+    readTime: 10,
+    read: true,
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ export const resources = [
     image:
       "https://www.hsnstore.it/blog/wp-content/uploads/2018/07/fumar-deporte.jpg",
     url: "https://www.lung.org/quit-smoking",
+    readTime: 30,
+    read: true,
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ export const resources = [
     image:
       "https://www.grupotodoplano.com/blog/wp-content/uploads/2023/05/como-afecta-el-tabaco-a-tu-descanso-grupo-todoplano.jpg",
     url: "https://quitsmokingcommunity.org/",
+    readTime: 20,
+    read: true,
   },
-  // Agrega más recursos según tus preferencias
+  // Puedes agregar más recursos aquí...
 ];
