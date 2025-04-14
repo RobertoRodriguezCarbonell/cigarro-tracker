@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "name": "cigarro-tracker",
   "description": "Cigarro Tracker - A simple app to track your cigarro consumption.",
   "author": "Roberto Rodríguez Carbonell",
