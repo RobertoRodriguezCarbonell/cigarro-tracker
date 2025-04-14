@@ -3,6 +3,22 @@ import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { createClient } from "@/utils/supabase/server";
+import {
+  Bell,
+  ChartNoAxesColumn,
+  MessageCircle,
+  Settings2,
+  User,
+  User2Icon,
+} from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default async function AuthButton() {
   const supabase = await createClient();
@@ -41,9 +57,37 @@ export default async function AuthButton() {
   }
   return user ? (
     <div className="flex items-center gap-4">
-      Hey, {user.email}!
+      {/* Hey, {user.email}! */}
+      <DropdownMenu>
+        <DropdownMenuTrigger className="border border-foreground p-1 rounded-full">
+          <User2Icon className="h-4 w-4" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>{user.email}</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <User className="mr-2 h-4 w-4" />
+            <Link href="/profile">Perfil</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <ChartNoAxesColumn className="mr-2 h-4 w-4" />
+            Estadísticas
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <MessageCircle className="mr-2 h-4 w-4" />
+            Mi Grupo
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Settings2 className="mr-2 h-4 w-4" />
+            Configuración
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      <div className="border border-foreground p-1 rounded-full">
+        <Bell className="h-4 w-4" />
+      </div>
       <form action={signOutAction}>
-        <Button type="submit" variant={"outline"}>
+        <Button type="submit" variant={"destructive"}>
           Sign out
         </Button>
       </form>
