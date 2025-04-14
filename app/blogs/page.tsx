@@ -15,12 +15,16 @@ export default function RecursosPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {resources.map((resource) => (
                     <a
-                        key={resource.id}
-                        href={resource.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
+                    key={resource.id}
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
                     >
+                        <div className="absolute m-4 bg-gray-200 dark:bg-gray-900 text-gray-800 dark:text-gray-100 rounded-full px-2 py-1 text-sm font-semibold">
+
+                        <span className="">{resource.creationDate}</span>
+                        </div>
                         <img
                             src={resource.image}
                             alt={resource.title}

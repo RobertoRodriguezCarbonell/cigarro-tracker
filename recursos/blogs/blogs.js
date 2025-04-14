@@ -9,6 +9,7 @@ export const resources = [
     url: "https://www.who.int/es/news-room/fact-sheets/detail/tobacco",
     readTime: 25,
     read: false,
+    creationDate: "2023-10-01",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const resources = [
     url: "https://smokefree.gov/",
     readTime: 10,
     read: true,
+    creationDate: "2023-10-02",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const resources = [
     url: "https://www.lung.org/quit-smoking",
     readTime: 30,
     read: true,
+    creationDate: "2023-10-03",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const resources = [
     url: "https://quitsmokingcommunity.org/",
     readTime: 20,
     read: true,
+    creationDate: "2023-10-04",
   },
   // Puedes agregar más recursos aquí...
 ];
