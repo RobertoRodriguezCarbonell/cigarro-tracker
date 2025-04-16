@@ -71,3 +71,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+.react-calendar-heatmap .color-empty {
+  fill: #e5e7eb; /* gris */
+}
+.react-calendar-heatmap .color-scale-1 {
+  fill: #86efac; /* verde claro para 0 cigarros */
+}
+.react-calendar-heatmap .color-scale-2 {
+  fill: #fde68a; /* amarillo */
+}
+.react-calendar-heatmap .color-scale-3 {
+  fill: #fb923c; /* naranja */
+}
+.react-calendar-heatmap .color-scale-4 {
+  fill: #f87171; /* rojo claro */
+}
+.react-calendar-heatmap .color-scale-5 {
+  fill: #dc2626; /* rojo oscuro */
+}

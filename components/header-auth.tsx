@@ -65,18 +65,22 @@ export default async function AuthButton() {
         <DropdownMenuContent>
           <DropdownMenuLabel>{user.email}</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <User className="mr-2 h-4 w-4" />
-            <Link href="/profile">Perfil</Link>
-          </DropdownMenuItem>
+          <Link href="/profile">
+            <DropdownMenuItem>
+              <User className="mr-2 h-4 w-4" />
+              Perfil
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>
             <ChartNoAxesColumn className="mr-2 h-4 w-4" />
             Estadísticas
           </DropdownMenuItem>
-          <DropdownMenuItem>
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Mi Grupo
-          </DropdownMenuItem>
+          <Link href="/grupo">
+            <DropdownMenuItem>
+              <User className="mr-2 h-4 w-4" />
+              Mi Grupo
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>
             <Settings2 className="mr-2 h-4 w-4" />
             Configuración
@@ -88,7 +92,7 @@ export default async function AuthButton() {
       </div>
       <form action={signOutAction}>
         <Button type="submit" variant={"destructive"}>
-          Sign out
+          Cerrar Sesión
         </Button>
       </form>
     </div>
