@@ -60,7 +60,7 @@
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/tuusuario/cigarro-tracker.git
+   git clone https://github.com/RobertoRodriguezCarbonell/cigarro-tracker.git
    cd cigarro-tracker
 
 ---
