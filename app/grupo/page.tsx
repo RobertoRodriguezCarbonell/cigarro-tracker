@@ -89,7 +89,7 @@ export default function GroupPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">Grupo #ads9f0878hkj</h1>
+      <h1 className="text-3xl font-bold mb-6 mt-20">Grupo #ads9f0878hkj</h1>
       {/* Chat dentro del Sheet */}
       <div className="mb-4">
         <Sheet>

@@ -4,7 +4,7 @@ import { Check, Clock } from "lucide-react";
 
 export default function RecursosPage() {
     return (
-        <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="max-w-5xl mx-auto px-4 py-10 mt-20">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Recursos para dejar de fumar
             </h1>

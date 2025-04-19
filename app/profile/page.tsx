@@ -1,8 +1,9 @@
-'use client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import CigaretteHeatmap from "@/components/cigarette-heatmap";
+import { signOutAction } from "../actions";
 
 export default function ProfilePage() {
   const [summary, setSummary] = useState({
@@ -12,7 +13,7 @@ export default function ProfilePage() {
   });
 
   const user = {
-    email: "usuario@ejemplo.com"
+    email: "usuario@ejemplo.com",
   };
 
   const profile = {
@@ -22,7 +23,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 mt-20">
       {/* Sección principal de perfil */}
       <h1 className="text-3xl font-bold mb-6">Perfil de Usuario</h1>
       <div className="flex flex-col md:flex-row border border-accent rounded-md">
@@ -54,10 +55,14 @@ export default function ProfilePage() {
             </p>
           )}
           <div className="mt-6 flex gap-x-4 justify-end">
-            <Button variant="outline" className="w-full sm:w-auto">
+            <Button variant="outline" className="">
               Editar Perfil
             </Button>
-            <Button variant="destructive">Cerrar Sesión</Button>
+            <form action={signOutAction}>
+              <Button type="submit" variant={"destructive"} size={"sm"}>
+                Cerrar Sesión
+              </Button>
+            </form>
           </div>
         </div>
       </div>
@@ -67,9 +72,7 @@ export default function ProfilePage() {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
             Historial Diario
           </h3>
-          <h3>
-            Cigarros Totales: {summary.total}
-          </h3>
+          <h3>Cigarros Totales: {summary.total}</h3>
         </div>
         <CigaretteHeatmap onDataSummary={setSummary} />
       </div>
@@ -90,23 +93,21 @@ export default function ProfilePage() {
           </div>
           <div className="p-4 border border-accent rounded-md">
             <p className="text-gray-500 dark:text-gray-300 text-sm">
-              Cigarros fumados esta semana
+              Últimos 7 días
             </p>
             <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">
               {summary.thisWeek}
             </p>
           </div>
+          <div className="p-4 border border-accent rounded-md">
+            <p className="text-gray-500 dark:text-gray-300 text-sm">
+              Cigarros totales registrados
+            </p>
+            <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {summary.total}
+            </p>
+          </div>
         </div>
-      </div>
-
-      {/* Sección de historial de consumo */}
-      <div className="mt-8 p-6 border border-accent rounded-md">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          Historial de Consumo
-        </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300 italic">
-          El historial detallado por fecha se mostrará próximamente.
-        </p>
       </div>
 
       {/* Sección de logros y metas */}
@@ -127,20 +128,6 @@ export default function ProfilePage() {
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             Progreso: 80% hacia tu meta mensual
           </p>
-        </div>
-      </div>
-
-      {/* Sección de configuración y preferencias */}
-      <div className="mt-8 p-6 border border-accent rounded-md">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          Configuración y Preferencias
-        </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-sm">
-          Ajusta tus notificaciones, privacidad y preferencias de visualización.
-        </p>
-        <div className="mt-4 flex flex-col gap-2">
-          <Button variant="outline">Preferencias de Notificaciones</Button>
-          <Button variant="outline">Ajustes de Privacidad</Button>
         </div>
       </div>
     </div>

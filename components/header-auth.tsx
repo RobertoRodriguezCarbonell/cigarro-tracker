@@ -7,7 +7,9 @@ import {
   Bell,
   ChartNoAxesColumn,
   MessageCircle,
+  Search,
   Settings2,
+  ShieldAlertIcon,
   User,
   User2Icon,
 } from "lucide-react";
@@ -57,6 +59,9 @@ export default async function AuthButton() {
   }
   return user ? (
     <div className="flex items-center gap-4">
+      <div className="border border-foreground p-1 rounded-full cursor-pointer">
+        <Search className="h-4 w-4" />
+      </div>
       {/* Hey, {user.email}! */}
       <DropdownMenu>
         <DropdownMenuTrigger className="border border-foreground p-1 rounded-full">
@@ -85,16 +90,77 @@ export default async function AuthButton() {
             <Settings2 className="mr-2 h-4 w-4" />
             Configuración
           </DropdownMenuItem>
+          <Link href="/administracion">
+            <DropdownMenuItem>
+              <ShieldAlertIcon className="mr-2 h-4 w-4" />
+              Administración
+            </DropdownMenuItem>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
-      <div className="border border-foreground p-1 rounded-full">
-        <Bell className="h-4 w-4" />
-      </div>
-      <form action={signOutAction}>
-        <Button type="submit" variant={"destructive"}>
+      <DropdownMenu>
+        <DropdownMenuTrigger className="border border-foreground p-1 rounded-full">
+          <Bell className="h-4 w-4" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-72">
+          <DropdownMenuLabel>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Notificaciones
+              </div>
+              <div className="text-xs text-muted-foreground cursor-pointer hover:text-destructive">
+                Borrar todo
+              </div>
+            </div>
+          </DropdownMenuLabel>
+          <DropdownMenuSeparator />
+
+          <DropdownMenuItem className="flex flex-col items-start space-y-1">
+            {/* Cabecera del grupo + opción */}
+            <div className="flex w-full items-center justify-between">
+              <div className="font-medium text-sm">Grupo #897sdfyads</div>
+              <div className="text-xs text-muted-foreground cursor-pointer hover:underline">
+                Marcar como leído
+              </div>
+            </div>
+
+            {/* Vista previa del mensaje */}
+            <div className="w-full text-sm text-muted-foreground">
+              <span className="font-medium text-foreground">Juan Carlos:</span>{" "}
+              Vamos bien, pero necesitamos más ideas.
+            </div>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem className="flex flex-col items-start space-y-1">
+            {/* Cabecera del grupo + opción */}
+            <div className="flex w-full items-center justify-between">
+              <div className="font-medium text-sm">Grupo #897sdfyads</div>
+              <div className="text-xs text-muted-foreground cursor-pointer hover:underline">
+                Marcar como leído
+              </div>
+            </div>
+
+            {/* Vista previa del mensaje */}
+            <div className="w-full text-sm text-muted-foreground">
+              <span className="font-medium text-foreground">Juan Carlos:</span>{" "}
+              Vamos bien, pero necesitamos más ideas.
+            </div>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem className="flex flex-col items-start space-y-1">
+            <div className="text-sm text-muted-foreground cursor-pointer hover:underline">
+              Ver todas las notificaciones
+            </div>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      {/* <form action={signOutAction}>
+        <Button type="submit" variant={"destructive"} size={"sm"}>
           Cerrar Sesión
         </Button>
-      </form>
+      </form> */}
     </div>
   ) : (
     <div className="flex gap-2">

@@ -39,10 +39,10 @@ export default function RootLayout({
         >
           <main className="min-h-screen flex flex-col items-center">
             <div className="flex-1 w-full flex flex-col gap-4 items-center">
-              <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
+              <nav className="w-full flex fixed justify-center border-b border-b-foreground/10 h-16 bg-background z-50">
                 <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
                   <div className="flex gap-5 items-center font-semibold gap-x-">
-                    <Link href={"/"} className="flex items-center text-2xl"><span className="text-3xl mr-2">😶‍🌫️</span> Cigarro Tracker</Link>
+                    <Link href={"/"} className="flex items-center lg:text-2xl md:text-2xl text-lg"><span className="lg:text-2xl md:text-2xl text-lg mr-2">😶‍🌫️</span> Cigarro Tracker</Link>
                     {/* <div className="flex items-center gap-2">
                       <DeployButton />
                     </div> */}
